@@ -303,7 +303,10 @@ public class Examen1 extends javax.swing.JFrame {
                 if (lista.get(index).getTipo().equals("Cliente")) {
                     
                 }else{
-                    
+                    AdminDashBoard d = new AdminDashBoard();
+                    d.pack();
+                    dispose();
+                    d.setVisible(true);
                 }
             }else{
                 if (JOptionPane.showConfirmDialog(this, "Desea crear un usuario?", "Usuario no existe", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
@@ -402,7 +405,7 @@ public class Examen1 extends javax.swing.JFrame {
         return libreria;
     }
     
-    public void AgregarLibro(Libro libro){
+    public static void AgregarLibro(Libro libro){
         libreria.add(libro);
     }
 
@@ -434,5 +437,5 @@ public class Examen1 extends javax.swing.JFrame {
     private javax.swing.JTextField tf_usuario;
     // End of variables declaration//GEN-END:variables
     ArrayList<Usuario> lista = new ArrayList();
-    ArrayList<Libro> libreria = new ArrayList();    
+    static ArrayList<Libro> libreria = new ArrayList();    
 }
