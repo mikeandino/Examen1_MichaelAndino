@@ -303,10 +303,8 @@ public class Examen1 extends javax.swing.JFrame {
                 if (lista.get(index).getTipo().equals("Cliente")) {
                     
                 }else{
-                    AdminDashBoard d = new AdminDashBoard();
-                    d.pack();
-                    dispose();
-                    d.setVisible(true);
+                    dispose();                    
+                    new AdminDashBoard().setVisible(true);;
                 }
             }else{
                 if (JOptionPane.showConfirmDialog(this, "Desea crear un usuario?", "Usuario no existe", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
